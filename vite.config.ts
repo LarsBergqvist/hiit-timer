@@ -7,5 +7,14 @@ export default defineConfig({
   server: {
     port: 5173,
     open: true
+  },
+  build: {
+    assetsDir: 'assets',
+    // Ensure assets are loaded relative to base path
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name][extname]'
+      }
+    }
   }
 }) 
