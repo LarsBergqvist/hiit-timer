@@ -16,9 +16,9 @@ function App() {
   const [showTimer, setShowTimer] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
 
-  const workSound = new Audio('/work-start.mp3')
-  const restSound = new Audio('/rest-start.mp3')
-  const beepSound = new Audio('/beep.mp3')
+  const workSound = new Audio('./work-start.mp3')
+  const restSound = new Audio('./rest-start.mp3')
+  const beepSound = new Audio('./beep.mp3')
 
   useEffect(() => {
     let timer: number
