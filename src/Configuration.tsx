@@ -19,7 +19,7 @@ const Configuration: React.FC<ConfigurationProps> = ({
 }) => {
   return (
     <div className="settings mb-4">
-      <div className="input-group mb-3">
+      <div className="input-group mb-3 slider">
         <span className="input-group-text">Work (seconds): {workSeconds}</span>
         <input
           type="range"
@@ -30,7 +30,7 @@ const Configuration: React.FC<ConfigurationProps> = ({
           max="60"
         />
       </div>
-      <div className="input-group mb-3">
+      <div className="input-group mb-3 slider">
         <span className="input-group-text">Rest (seconds): {restSeconds}</span>
         <input
           type="range"
@@ -41,7 +41,7 @@ const Configuration: React.FC<ConfigurationProps> = ({
           max="30"
         />
       </div>
-      <div className="input-group mb-3">
+      <div className="input-group mb-3 slider">
         <span className="input-group-text">Rounds: {rounds}</span>
         <input
           type="range"
