@@ -13,10 +13,10 @@ interface TimerProps {
 }
 
 const Timer: React.FC<TimerProps> = ({
+  isWorking,
   timeLeft,
   currentRound,
   rounds,
-  isRunning,
   isPaused,
   stopTimer,
   pauseTimer,
@@ -24,18 +24,19 @@ const Timer: React.FC<TimerProps> = ({
   return (
     <div className="timer-container">
       <div className="timer-circle">
-        <div className="timer-time">
-          {timeLeft}
-        </div>
+        <div className="timer-time">{timeLeft}s</div>
         <div className="timer-round">
-          {currentRound + 1} / {rounds}
+          Round {currentRound + 1} of {rounds}
+        </div>
+        <div className="timer-state">
+          {isWorking ? 'Work' : 'Rest'}
         </div>
       </div>
-      <button className="btn btn-danger mt-3" onClick={stopTimer} disabled={!isRunning}>
-        Stop
-      </button>
-      <button className="btn btn-warning mt-3" onClick={pauseTimer} disabled={!isRunning}>
+      <button onClick={pauseTimer} className="btn btn-secondary">
         {isPaused ? 'Resume' : 'Pause'}
+      </button>
+      <button onClick={stopTimer} className="btn btn-danger">
+        Stop
       </button>
     </div>
   );
