@@ -4,6 +4,7 @@ import './App.css'
 import Configuration from './Configuration'
 import Timer from './Timer'
 import { Modal } from 'react-bootstrap'
+import { Howl } from 'howler'
 
 function App() {
   const [workSeconds, setWorkSeconds] = useState(30)
@@ -16,9 +17,20 @@ function App() {
   const [showTimer, setShowTimer] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
 
-  const workSound = new Audio('./work-start.mp3')
-  const restSound = new Audio('./rest-start.mp3')
-  const beepSound = new Audio('./beep.wav')
+  const workSound = new Howl({
+    src: ['./work-start.mp3'],
+    preload: true,
+  })
+
+  const restSound = new Howl({
+    src: ['./rest-start.mp3'],
+    preload: true,
+  })
+
+  const beepSound = new Howl({
+    src: ['./beep.mp3'],
+    preload: true,
+  })
 
   useEffect(() => {
     let timer: number
@@ -27,7 +39,7 @@ function App() {
         setTimeLeft((prev) => prev - 1)
 
         // Play countdown beep for the last 3 seconds
-        if (timeLeft <= 3 && timeLeft > 0) {
+        if (timeLeft <= 4 && timeLeft > 1) {
           beepSound.play()
         }
       }, 1000)

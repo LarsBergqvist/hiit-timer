@@ -11,12 +11,14 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "howler": "^2.2.4",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
+    "@types/howler": "^2.2.12",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
