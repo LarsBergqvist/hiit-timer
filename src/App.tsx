@@ -18,7 +18,7 @@ function App() {
 
   const workSound = new Audio('./work-start.mp3')
   const restSound = new Audio('./rest-start.mp3')
-  const beepSound = new Audio('./beep.wav')
+  const beepSound = new Audio('./beep.mp3')
 
   useEffect(() => {
     let timer: number
