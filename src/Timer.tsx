@@ -24,7 +24,7 @@ const Timer: React.FC<TimerProps> = ({
   return (
     <div className="timer-container">
       <div className="timer-circle">
-        <div className="timer-time">{timeLeft}s</div>
+        <div className="timer-time">{timeLeft}</div>
         <div className="timer-round">
           Round {currentRound + 1} of {rounds}
         </div>
@@ -32,10 +32,10 @@ const Timer: React.FC<TimerProps> = ({
           {isWorking ? 'Work' : 'Rest'}
         </div>
       </div>
-      <button onClick={pauseTimer} className="btn btn-secondary">
+      <button onClick={pauseTimer} className="btn btn-secondary action-button">
         {isPaused ? 'Resume' : 'Pause'}
       </button>
-      <button onClick={stopTimer} className="btn btn-danger">
+      <button onClick={stopTimer} className="btn btn-danger action-button">
         Stop
       </button>
     </div>

@@ -18,8 +18,8 @@ const Configuration: React.FC<ConfigurationProps> = ({
   setRounds,
 }) => {
   return (
-    <div className="settings mb-4">
-      <div className="input-group mb-3 slider">
+    <div className="settings mb-4 slider">
+      <div className="input-group mb-3">
         <span className="input-group-text">Work (seconds): {workSeconds}</span>
         <input
           type="range"
