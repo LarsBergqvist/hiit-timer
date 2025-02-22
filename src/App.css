@@ -78,7 +78,7 @@
   margin: 40px 0;
 
   input {
-    margin-top: 10px;
+    margin-top: 15px;
   }
 }
 
@@ -91,8 +91,8 @@
 .slider input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 53px;
   background: #fff;
   cursor: pointer;
   border-radius: 50%;
@@ -100,8 +100,8 @@
 }
 
 .slider input[type="range"]::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   background: #fff;
   cursor: pointer;
   border-radius: 50%;
